@@ -27,11 +27,12 @@ class AlphabeticallySortedImports(BaseChecker):
             # object name and it's alias (or None, if not aliased)
             names = [name for name, _alias in node.names]
             # we sort all names to get desired structure
+            
+            # if our object is not placed in the same order as in 
+            # sorted_names, then we report this fact as a violation
             sorted_names = sorted(names)
             for actual_index, name in enumerate(names):
-                correct_index = sorted_names.index(name)
-                # if our object is not placed in the same order as in 
-                # sorted_names, then we report this fact as a violation
+                correct_index = sorted_names.index(name)    
                 if correct_index != actual_index:
                     direction = self.DIR_LOWER if correct_index > actual_index else self.DIR_HIGHER
                     args = name, node.as_string(), direction
