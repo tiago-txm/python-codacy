@@ -1,5 +1,3 @@
-import astroid
-
 from pylint.interfaces import IAstroidChecker
 from pylint.checkers import BaseChecker
 
@@ -22,9 +20,6 @@ class AlphabeticallySortedImports(BaseChecker):
     options = ()
 
     priority = -1
-
-    def visit_importfrom(self, node):
-        pass  # to be implemented
 
     def visit_importfrom(self, node):
             # node is an astroid.node_classes.ImportFrom instance
