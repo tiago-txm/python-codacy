@@ -1,6 +1,0 @@
----
-engines:
-  pylintpython3:
-    config:
-      languages:
-        - "python"
