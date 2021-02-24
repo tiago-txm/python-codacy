@@ -1,6 +1,8 @@
 """
 `getdoc` should land before `getmodule`
 """
+class teste():
+    
 from inspect import (
     getmodule,
     getdoc
