@@ -1,7 +1,10 @@
 """
 `getdoc` should land before `getmodule`
 """
-
+from inspect import (
+    getmodule,
+    getdoc
+)
 def teste():
    if True:
        #blablabla
@@ -10,10 +13,7 @@ def teste():
 def teste2():
 print("hello")
 
-from inspect import (
-    getmodule,
-    getdoc,
-)
+
 
 
 print(getmodule(getdoc))
