@@ -11,3 +11,11 @@ from inspect import (
 print(getmodule(getdoc))
 #blabla
 print(getdoc(getmodule))
+
+def teste():
+    if True:
+        #blablabla
+        return True
+
+def teste2():
+ print("hello")
